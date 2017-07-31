@@ -1,0 +1,27 @@
+html
+  include partials/bootstrap_contents.jade
+  body
+    .container
+      .row
+        .col-sm-4
+          h1 
+            Hello  
+            =person
+        .col-sm-4
+          h1 City selected for you is 
+            =cityName
+        .col-sm-4
+          h1
+            =headLine
+    .row
+      .col-sm-12
+        p.text-center
+          img(src='/'+cityName+'.jpg')
+    .row
+      .col-sm-12
+        br
+        br
+    .row
+      .col-sm-12
+        p.text-center
+          a(href='/') SIGN-IN AGAIN 

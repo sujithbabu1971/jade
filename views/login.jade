@@ -1,0 +1,17 @@
+html
+  //
+    For handlebars, this file should be present in partials folder.
+    The file name would be bootstrap_contents.handlebars. Do not
+    specify any folder name , path and extension. The f
+  include partials/bootstrap_contents.jade
+  body
+    form(method='get', action='/toLandingPage')
+      .container
+        .row
+          .col-sm-12
+            p.text-center LOGIN PAGE
+        .row
+          .col-sm-6
+            input.form-control(type='text', name='userName', placeholder='Enter your name')
+          .col-sm-6
+            button.btn.btn-default(type='submit', name='signIn', value='Sign-in') Sign-in

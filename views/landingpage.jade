@@ -1,0 +1,14 @@
+html
+  include partials/bootstrap_contents.jade
+  body
+    form(method='post', action='/toCityPage')
+      .container
+        .row
+          .col-sm-12
+            p.text-center Hello 
+              =userName
+        .row
+          .col-sm-6
+            input(type='text', name='interest', placeholder='Enter your interest')
+          .col-sm-6
+            button(type='submit', name='city', value='city') Get Your City
