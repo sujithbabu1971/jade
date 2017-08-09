@@ -5,6 +5,10 @@ var bodyparser = require("body-parser");
 app.use(bodyparser.json()); //deprecated
 app.use(bodyparser.urlencoded({"extended":true})); //deprecated
 var session = require("express-session");
+// Refer https://www.npmjs.com/package/express-session-expire-timeout for various -->
+//	session option . The session timeout default seems to be infinity.
+// cookie: { secure: true } below would set secure flag on the cookie. But for this
+// to work, https is needed. 
 app.use(session({"secret":"secret", "resave":"true", "saveUninitialized":"true"})); //deprecated
 // . is neede for relative path to the current folder.
 var routers = require("./routes/routes.js");

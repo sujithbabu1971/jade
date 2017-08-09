@@ -1,8 +1,11 @@
 // Outside world refers this as loginPageHandler though the function name is loginPage
 module.exports.loginPageHandler = function loginPage(req,res)
 {
+
 	req.session.destroy();
+	console.log("home page");
 	res.render("login.jade", {});
+	
 }
 
 module.exports.landingPageHandler = function landingPage(req,res)
@@ -50,7 +53,7 @@ module.exports.cityPageHandler = function cityInternalFn(req,res)
 		cityName = "New York";
 		headLineValue=cityName+ " is the historical capital  of the world";
 	}
-	else if (interest==="conservativism")
+	else if (interest==="conservatism")
 	{
 		cityName = "London";
 		headLineValue=cityName+ " is the capital  of the conservatives";
